@@ -9,6 +9,7 @@ Analysis of RTD (Denver-area public transit) reliability
 - gained a reputation for unreliability
 - Aurora line hasn't opened because it's operated by same company, want to get issues worked out
 
+
 ## Process
 
 1. Collect all tweets from the RTD Twitter account [@RideRTD](twitter.com/RideRTD) (`twitter-collect.py`)
@@ -19,17 +20,8 @@ Analysis of RTD (Denver-area public transit) reliability
   - when URLs were given in the tweet they were referenced for additional details
   - if there is a scheduled delay that did not occur (according to a subsequent tweet), not recorded
 4. Analyze frequency and duration of delays (`analysis.py`)
-  - what is the average frequency (days/month) of delays by line?
-    - hypothesis: the A line has more frequent delays than other lines
-  - what is the average duration (in minutes) of delays by line?
-    - hypothesis: the A line has longer delays than other lines
-  - what is the average extent (in hours) of delays by line?
-    - hypothesis: the A line has more extensive than other lines
-  - what is the average frequency of closures (days/month) by line?
-    - hypothesis: the A line has more frequent closures than other lines
-  - have delays become more or less frequent since the A line opened? (e.g. Oct vs. May)
-  - assume that every mile of track has a failure rate, where any delay or closure on a day is a failure, and estimate this rate for each line
-  - future:
+  - Future questions:
+    - assume that every mile of track has a failure rate, where any delay or closure on a day is a failure, and estimate this rate for each line
     - are certain lines correlated (for occurrence and duration)?
       - hypothesis: geographically colocated lines will have correlated delays
       - correlation could also be indicated by an outage reported in the same tweet
