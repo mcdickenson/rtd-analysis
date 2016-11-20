@@ -103,7 +103,7 @@ closures = data[data['type'] == 'closure']
 closures_total = closures.groupby('line')
 
 fig4, ax = plt.subplots()
-rects1 = ax.bar(ind, closures_total.size(), width, color=colors.values()[0:n-1])
+rects1 = ax.bar(ind, closures_total.size(), width, color=colors.values()[0:n])
 ax.set_xticks(ind + 0.5)
 ax.set_xticklabels(closures_total.size().index)
 ax.set_ylabel('Total closures')
